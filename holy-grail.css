@@ -1,0 +1,62 @@
+/*
+* This CSS file is for the overall page layout in the form of the holy grail layout.
+ */
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav article navRight"
+    "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 280px 1fr 280px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+header, footer, article, nav, div {
+    padding: 1.2em;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+#navbarRight {
+    grid-area: navRight;
+}
+
+.stickyDiv {
+    position: sticky;
+    top: 0;
+}
+
+@media all and (max-width: 1000px) {
+    body {
+        grid-template-areas:
+      "header"
+      "nav"
+      "article"
+      "footer";
+        grid-template-rows: 80px auto  1fr 70px;
+        grid-template-columns: 1fr;
+    }
+
+    #navbarRight {
+        display: none;
+    }
+
+}

@@ -1,0 +1,105 @@
+/*
+* This CSS file contains the rules which are not directly associated with the overall holy grail layout.
+ */
+/*https://atlassian.design/foundations/color-new/color-palette-new */
+:root {
+    --header-footer-background: #23272F;
+    --header-footer-text-color: rgb(222, 228, 234);
+
+    --navbars-background: var(--header-footer-background);
+    --navbars-text-color: rgb(246 247 249);
+    --active-highlight-link: rgb(186, 243, 219);
+
+    --heading-text-color: var(--navbars-text-color);
+    --content-text-color: var(--navbars-text-color);
+    --section-background-color: var(--header-footer-background);
+
+    --body-background-color: #313338;
+
+    --link-color: var(--header-footer-text-color);
+    --link-hover-color: var(--link-color);
+}
+
+body {
+    background-color: var(--body-background-color);
+
+}
+
+/* Begin article rules */
+section {
+    max-width: 1500px;
+    /* margin-bottom: 50px;*/
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--section-background-color);
+    color: var(--content-text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px groove gray;
+}
+
+h1, h2, h3 {
+    color: var(--heading-text-color)
+}
+
+/* End article rules */
+
+/* Begin navbar rules */
+
+#navbarRight, nav {
+    background-color: var(--navbars-background);
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 10px 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--navbars-text-color);
+}
+
+.nav-link.active {
+    color: var(--active-highlight-link)
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* End navbar rules */
+
+/* Begin footer rules */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-footer-background);
+}
+
+.footer-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* End footer rules */
+
+/* Begin header rules */
+header {
+    background-color: var(--header-footer-background);
+    color: var(--header-footer-text-color);
+}
+
+/* End header rules */
